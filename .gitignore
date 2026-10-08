@@ -1,0 +1,16 @@
+﻿# Xcode
+.DS_Store
+*/build/*
+*.xcuserstate
+project.xcworkspace/xcuserdata/
+*.xcuserdatad
+xcuserdata/
+DerivedData/
+*.moved-aside
+*.ipa
+*.app
+*.dSYM.zip
+*.dSYM
+Timeline/
+timeline.xctimeline
+.swiftpm/

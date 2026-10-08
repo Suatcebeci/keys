@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010001012D75000100000001 /* PasswordVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000001 /* PasswordVaultApp.swift */; };
+		010001012D75000100000002 /* PasswordEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000002 /* PasswordEntry.swift */; };
+		010001012D75000100000004 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000004 /* KeychainService.swift */; };
+		010001012D75000100000005 /* BiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000005 /* BiometricAuthService.swift */; };
+		010001012D75000100000006 /* ClipboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000006 /* ClipboardService.swift */; };
+		010001012D75000100000007 /* PrivacyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000007 /* PrivacyService.swift */; };
+		010001012D75000100000008 /* PasswordVaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000008 /* PasswordVaultViewModel.swift */; };
+		010001012D75000100000009 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000009 /* LockView.swift */; };
+		010001012D7500010000000A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000000A /* HomeView.swift */; };
+		010001012D7500010000000B /* PrivacyOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000000B /* PrivacyOverlayView.swift */; };
+		010001012D7500010000000C /* SecurityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000000C /* SecurityConstants.swift */; };
+		010001012D7500010000000D /* SecureLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000000D /* SecureLogger.swift */; };
+		010001012D7500010000000E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010001012D75000300000001 /* Security.framework */; };
+		010001012D7500010000000F /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010001012D75000300000002 /* LocalAuthentication.framework */; };
+		010001012D75000100000010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000000F /* Assets.xcassets */; };
+		010001012D75000100000011 /* PasswordEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000011 /* PasswordEntryTests.swift */; };
+		010001012D75000100000012 /* KeychainServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000012 /* KeychainServiceTests.swift */; };
+		010001012D75000100000013 /* PasswordVaultViewModelSecurityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000013 /* PasswordVaultViewModelSecurityTests.swift */; };
+		010001012D75000100000014 /* ClipboardServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000014 /* ClipboardServiceTests.swift */; };
+		010001012D75000100000015 /* AddPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000015 /* AddPasswordView.swift */; };
+		010001012D75000100000016 /* PasswordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000016 /* PasswordDetailView.swift */; };
+		010001012D75000100000017 /* EditPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000017 /* EditPasswordView.swift */; };
+		010001012D75000100000018 /* PasswordCRUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000018 /* PasswordCRUDTests.swift */; };
+		010001012D75000100000019 /* PasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000019 /* PasswordGenerator.swift */; };
+		010001012D7500010000001A /* PasswordStrengthAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000001A /* PasswordStrengthAnalyzer.swift */; };
+		010001012D7500010000001B /* PasswordStrengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000001B /* PasswordStrengthView.swift */; };
+		010001012D7500010000001C /* PasswordGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000001C /* PasswordGeneratorView.swift */; };
+		010001012D7500010000001D /* PasswordGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000001D /* PasswordGeneratorTests.swift */; };
+		010001012D7500010000001E /* PasswordStrengthAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000001E /* PasswordStrengthAnalyzerTests.swift */; };
+		010001012D75000100000021 /* RecordType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000021 /* RecordType.swift */; };
+		010001012D75000100000022 /* ExcelExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000022 /* ExcelExportService.swift */; };
+		010001012D75000100000023 /* AddBankAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000023 /* AddBankAccountView.swift */; };
+		010001012D75000100000024 /* BankAccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000024 /* BankAccountDetailView.swift */; };
+		010001012D75000100000025 /* EditBankAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000025 /* EditBankAccountView.swift */; };
+		010001012D75000100000026 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000026 /* ShareSheet.swift */; };
+		010001012D75000100000027 /* BankAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000027 /* BankAccountTests.swift */; };
+		010001012D75000100000028 /* ExcelExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000028 /* ExcelExportTests.swift */; };
+		010001012D75000100000029 /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D75000200000029 /* BackupService.swift */; };
+		010001012D7500010000002A /* BackupAndPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010001012D7500020000002A /* BackupAndPersistenceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		010001012D75000C00000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 010001012D75000900000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 010001012D75000600000001;
+			remoteInfo = Keys;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		010001012D75000200000000 /* Keys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keys.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		010001012D75000200000001 /* PasswordVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultApp.swift; sourceTree = "<group>"; };
+		010001012D75000200000002 /* PasswordEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEntry.swift; sourceTree = "<group>"; };
+		010001012D75000200000004 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		010001012D75000200000005 /* BiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthService.swift; sourceTree = "<group>"; };
+		010001012D75000200000006 /* ClipboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardService.swift; sourceTree = "<group>"; };
+		010001012D75000200000007 /* PrivacyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyService.swift; sourceTree = "<group>"; };
+		010001012D75000200000008 /* PasswordVaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultViewModel.swift; sourceTree = "<group>"; };
+		010001012D75000200000009 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		010001012D7500020000000A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		010001012D7500020000000B /* PrivacyOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyOverlayView.swift; sourceTree = "<group>"; };
+		010001012D7500020000000C /* SecurityConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityConstants.swift; sourceTree = "<group>"; };
+		010001012D7500020000000D /* SecureLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLogger.swift; sourceTree = "<group>"; };
+		010001012D7500020000000E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		010001012D7500020000000F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		010001012D75000200000010 /* KeysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		010001012D75000200000011 /* PasswordEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEntryTests.swift; sourceTree = "<group>"; };
+		010001012D75000200000012 /* KeychainServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceTests.swift; sourceTree = "<group>"; };
+		010001012D75000200000013 /* PasswordVaultViewModelSecurityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultViewModelSecurityTests.swift; sourceTree = "<group>"; };
+		010001012D75000200000014 /* ClipboardServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardServiceTests.swift; sourceTree = "<group>"; };
+		010001012D75000200000015 /* AddPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordView.swift; sourceTree = "<group>"; };
+		010001012D75000200000016 /* PasswordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailView.swift; sourceTree = "<group>"; };
+		010001012D75000200000017 /* EditPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordView.swift; sourceTree = "<group>"; };
+		010001012D75000200000018 /* PasswordCRUDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCRUDTests.swift; sourceTree = "<group>"; };
+		010001012D75000200000019 /* PasswordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGenerator.swift; sourceTree = "<group>"; };
+		010001012D7500020000001A /* PasswordStrengthAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStrengthAnalyzer.swift; sourceTree = "<group>"; };
+		010001012D7500020000001B /* PasswordStrengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStrengthView.swift; sourceTree = "<group>"; };
+		010001012D7500020000001C /* PasswordGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorView.swift; sourceTree = "<group>"; };
+		010001012D7500020000001D /* PasswordGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorTests.swift; sourceTree = "<group>"; };
+		010001012D7500020000001E /* PasswordStrengthAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStrengthAnalyzerTests.swift; sourceTree = "<group>"; };
+		010001012D75000200000021 /* RecordType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordType.swift; sourceTree = "<group>"; };
+		010001012D75000200000022 /* ExcelExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcelExportService.swift; sourceTree = "<group>"; };
+		010001012D75000200000023 /* AddBankAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBankAccountView.swift; sourceTree = "<group>"; };
+		010001012D75000200000024 /* BankAccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountDetailView.swift; sourceTree = "<group>"; };
+		010001012D75000200000025 /* EditBankAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBankAccountView.swift; sourceTree = "<group>"; };
+		010001012D75000200000026 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		010001012D75000200000027 /* BankAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountTests.swift; sourceTree = "<group>"; };
+		010001012D75000200000028 /* ExcelExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcelExportTests.swift; sourceTree = "<group>"; };
+		010001012D75000200000029 /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
+		010001012D7500020000002A /* BackupAndPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupAndPersistenceTests.swift; sourceTree = "<group>"; };
+		010001012D75000300000001 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		010001012D75000300000002 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		010001012D75000400000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010001012D7500010000000E /* Security.framework in Frameworks */,
+				010001012D7500010000000F /* LocalAuthentication.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		010001012D75000400000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		010001012D75000500000000 /* MainGroup */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D75000500000001 /* Keys */,
+				010001012D75000500000011 /* KeysTests */,
+				010001012D75000500000008 /* Frameworks */,
+				010001012D75000500000009 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		010001012D75000500000001 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D75000500000002 /* App */,
+				010001012D75000500000003 /* Models */,
+				010001012D75000500000004 /* Services */,
+				010001012D75000500000005 /* ViewModels */,
+				010001012D75000500000006 /* Views */,
+				010001012D75000500000007 /* Utilities */,
+				010001012D75000500000010 /* Resources */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		010001012D75000500000011 /* KeysTests */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D75000200000011 /* PasswordEntryTests.swift */,
+				010001012D75000200000012 /* KeychainServiceTests.swift */,
+				010001012D75000200000013 /* PasswordVaultViewModelSecurityTests.swift */,
+				010001012D75000200000014 /* ClipboardServiceTests.swift */,
+				010001012D75000200000018 /* PasswordCRUDTests.swift */,
+				010001012D7500020000001D /* PasswordGeneratorTests.swift */,
+				010001012D7500020000001E /* PasswordStrengthAnalyzerTests.swift */,
+				010001012D75000200000027 /* BankAccountTests.swift */,
+				010001012D75000200000028 /* ExcelExportTests.swift */,
+				010001012D7500020000002A /* BackupAndPersistenceTests.swift */,
+			);
+			path = KeysTests;
+			sourceTree = "<group>";
+		};
+		010001012D75000500000002 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D75000200000001 /* PasswordVaultApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		010001012D75000500000003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D75000200000002 /* PasswordEntry.swift */,
+				010001012D75000200000021 /* RecordType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		010001012D75000500000004 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D75000200000004 /* KeychainService.swift */,
+				010001012D75000200000005 /* BiometricAuthService.swift */,
+				010001012D75000200000006 /* ClipboardService.swift */,
+				010001012D75000200000007 /* PrivacyService.swift */,
+				010001012D75000200000019 /* PasswordGenerator.swift */,
+				010001012D7500020000001A /* PasswordStrengthAnalyzer.swift */,
+				010001012D75000200000022 /* ExcelExportService.swift */,
+				010001012D75000200000029 /* BackupService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		010001012D75000500000005 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D75000200000008 /* PasswordVaultViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		010001012D75000500000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D75000200000009 /* LockView.swift */,
+				010001012D7500020000000A /* HomeView.swift */,
+				010001012D75000200000015 /* AddPasswordView.swift */,
+				010001012D75000200000016 /* PasswordDetailView.swift */,
+				010001012D75000200000017 /* EditPasswordView.swift */,
+				010001012D7500020000001C /* PasswordGeneratorView.swift */,
+				010001012D75000200000023 /* AddBankAccountView.swift */,
+				010001012D75000200000024 /* BankAccountDetailView.swift */,
+				010001012D75000200000025 /* EditBankAccountView.swift */,
+				010001012D7500050000000B /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		010001012D7500050000000B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D7500020000000B /* PrivacyOverlayView.swift */,
+				010001012D7500020000001B /* PasswordStrengthView.swift */,
+				010001012D75000200000026 /* ShareSheet.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		010001012D75000500000007 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D7500020000000C /* SecurityConstants.swift */,
+				010001012D7500020000000D /* SecureLogger.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		010001012D75000500000010 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D7500020000000E /* Info.plist */,
+				010001012D7500020000000F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		010001012D75000500000008 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D75000300000001 /* Security.framework */,
+				010001012D75000300000002 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		010001012D75000500000009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				010001012D75000200000000 /* Keys.app */,
+				010001012D75000200000010 /* KeysTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		010001012D75000600000001 /* Keys */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 010001012D75000700000001 /* Build configuration list for PBXNativeTarget "Keys" */;
+			buildPhases = (
+				010001012D75000800000001 /* Sources */,
+				010001012D75000400000001 /* Frameworks */,
+				010001012D75000B00000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keys;
+			productName = Keys;
+			productReference = 010001012D75000200000000 /* Keys.app */;
+			productType = "com.apple.product-type.application";
+		};
+		010001012D75000600000002 /* KeysTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 010001012D75000700000003 /* Build configuration list for PBXNativeTarget "KeysTests" */;
+			buildPhases = (
+				010001012D75000800000002 /* Sources */,
+				010001012D75000400000002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				010001012D75000D00000001 /* PBXTargetDependency */,
+			);
+			name = KeysTests;
+			productName = KeysTests;
+			productReference = 010001012D75000200000010 /* KeysTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		010001012D75000900000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					010001012D75000600000001 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					010001012D75000600000002 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 010001012D75000600000001;
+					};
+				};
+			};
+			buildConfigurationList = 010001012D75000700000002 /* Build configuration list for PBXProject "Keys" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = tr;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				tr,
+				Base,
+			);
+			mainGroup = 010001012D75000500000000 /* MainGroup */;
+			productRefGroup = 010001012D75000500000009 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				010001012D75000600000001 /* Keys */,
+				010001012D75000600000002 /* KeysTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		010001012D75000B00000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010001012D75000100000010 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		010001012D75000800000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010001012D75000100000001 /* PasswordVaultApp.swift in Sources */,
+				010001012D75000100000002 /* PasswordEntry.swift in Sources */,
+				010001012D75000100000004 /* KeychainService.swift in Sources */,
+				010001012D75000100000005 /* BiometricAuthService.swift in Sources */,
+				010001012D75000100000006 /* ClipboardService.swift in Sources */,
+				010001012D75000100000007 /* PrivacyService.swift in Sources */,
+				010001012D75000100000008 /* PasswordVaultViewModel.swift in Sources */,
+				010001012D75000100000009 /* LockView.swift in Sources */,
+				010001012D7500010000000A /* HomeView.swift in Sources */,
+				010001012D7500010000000B /* PrivacyOverlayView.swift in Sources */,
+				010001012D7500010000000C /* SecurityConstants.swift in Sources */,
+				010001012D7500010000000D /* SecureLogger.swift in Sources */,
+				010001012D75000100000015 /* AddPasswordView.swift in Sources */,
+				010001012D75000100000016 /* PasswordDetailView.swift in Sources */,
+				010001012D75000100000017 /* EditPasswordView.swift in Sources */,
+				010001012D75000100000019 /* PasswordGenerator.swift in Sources */,
+				010001012D7500010000001A /* PasswordStrengthAnalyzer.swift in Sources */,
+				010001012D7500010000001B /* PasswordStrengthView.swift in Sources */,
+				010001012D7500010000001C /* PasswordGeneratorView.swift in Sources */,
+				010001012D75000100000021 /* RecordType.swift in Sources */,
+				010001012D75000100000022 /* ExcelExportService.swift in Sources */,
+				010001012D75000100000023 /* AddBankAccountView.swift in Sources */,
+				010001012D75000100000024 /* BankAccountDetailView.swift in Sources */,
+				010001012D75000100000025 /* EditBankAccountView.swift in Sources */,
+				010001012D75000100000026 /* ShareSheet.swift in Sources */,
+				010001012D75000100000029 /* BackupService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		010001012D75000800000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010001012D75000100000011 /* PasswordEntryTests.swift in Sources */,
+				010001012D75000100000012 /* KeychainServiceTests.swift in Sources */,
+				010001012D75000100000013 /* PasswordVaultViewModelSecurityTests.swift in Sources */,
+				010001012D75000100000014 /* ClipboardServiceTests.swift in Sources */,
+				010001012D75000100000018 /* PasswordCRUDTests.swift in Sources */,
+				010001012D7500010000001D /* PasswordGeneratorTests.swift in Sources */,
+				010001012D7500010000001E /* PasswordStrengthAnalyzerTests.swift in Sources */,
+				010001012D75000100000027 /* BankAccountTests.swift in Sources */,
+				010001012D75000100000028 /* ExcelExportTests.swift in Sources */,
+				010001012D7500010000002A /* BackupAndPersistenceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		010001012D75000D00000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 010001012D75000600000001 /* Keys */;
+			targetProxy = 010001012D75000C00000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		010001012D75000A00000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSIONS = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDEFINED_VARIABLES = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		010001012D75000A00000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSIONS = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDEFINED_VARIABLES = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		010001012D75000A00000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Keys/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Keys;
+				INFOPLIST_KEY_LSRequiresIPhoneOS = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.offlinevault.keys;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		010001012D75000A00000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Keys/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Keys;
+				INFOPLIST_KEY_LSRequiresIPhoneOS = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.offlinevault.keys;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		010001012D75000A00000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.offlinevault.keystests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keys.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Keys";
+			};
+			name = Debug;
+		};
+		010001012D75000A00000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.offlinevault.keystests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keys.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Keys";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		010001012D75000700000001 /* Build configuration list for PBXNativeTarget "Keys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				010001012D75000A00000003 /* Debug */,
+				010001012D75000A00000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		010001012D75000700000002 /* Build configuration list for PBXProject "Keys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				010001012D75000A00000001 /* Debug */,
+				010001012D75000A00000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		010001012D75000700000003 /* Build configuration list for PBXNativeTarget "KeysTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				010001012D75000A00000005 /* Debug */,
+				010001012D75000A00000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 010001012D75000900000001 /* Project object */;
+}
