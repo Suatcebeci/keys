@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KEYS — Gizlilik ve Güvenlik Politikası</title>
+  <meta name="description" content="KEYS parola yöneticisinin tek merkezli Gizlilik ve Güvenlik Politikası. Geliştirici sunucusu yok, çevrimdışı temel kasa, istemci tarafı şifreli bulut yedekleme.">
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --card-bg: #ffffff;
+      --text-main: #1d2939;
+      --text-muted: #475467;
+      --primary: #175cd3;
+      --primary-light: #eff4ff;
+      --accent: #0e9384;
+      --accent-light: #f0fdf9;
+      --border: #e4e7ec;
+      --danger: #b42318;
+      --danger-bg: #fef3f2;
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card-bg: #1e293b;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --primary: #38bdf8;
+        --primary-light: #082f49;
+        --accent: #2dd4bf;
+        --accent-light: #134e4a;
+        --border: #334155;
+        --danger: #f87171;
+        --danger-bg: #450a0a;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 32px 16px;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+    header {
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    h1 {
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+    .tab-bar {
+      display: flex;
+      gap: 8px;
+      background: var(--bg);
+      padding: 6px;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      border: 1px solid var(--border);
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 10px 16px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      text-align: center;
+    }
+    .tab-btn.active {
+      background: var(--card-bg);
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .tab-pane {
+      display: none;
+    }
+    .tab-pane.active {
+      display: block;
+      animation: fadeIn 0.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      font-size: 1.28rem;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    p {
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+    ul, ol {
+      margin-left: 24px;
+      margin-bottom: 16px;
+      color: var(--text-muted);
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .card-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+    .alert-box {
+      background: var(--danger-bg);
+      border: 1px solid var(--danger);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      color: var(--danger);
+    }
+    .alert-box h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .alert-box p {
+      color: inherit;
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    @media (max-width: 640px) {
+      body { padding: 0; }
+      main { border-radius: 0; border: none; padding: 22px 18px; }
+      h1 { font-size: 1.6rem; }
+      .tab-btn { font-size: 0.88rem; padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">← KEYS Ana Sayfa</a>
+    
+    <header>
+      <h1>KEYS — Gizlilik ve Güvenlik</h1>
+      <p class="meta">Yayıncı: <strong>Suat CEBECİ</strong> · Yürürlük / Son Güncelleme: <strong>12 Kasım 2026</strong></p>
+    </header>
+
+    <!-- Tek URL altında Sekmeli Gezinme -->
+    <div class="tab-bar" role="tablist">
+      <button id="btn-privacy" class="tab-btn active" role="tab" aria-selected="true" aria-controls="pane-privacy" onclick="showTab('privacy')">🛡️ Gizlilik Politikası</button>
+      <button id="btn-security" class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-security" onclick="showTab('security')">🔒 Güvenlik Politikası</button>
+    </div>
+
+    <!-- 1. GİZLİLİK POLİTİKASI -->
+    <section id="pane-privacy" class="tab-pane active" role="tabpanel" aria-labelledby="btn-privacy">
+      <p>Bu politika, <strong>KEYS Password Manager</strong> uygulamasının cihazda işlediği bilgileri, izinleri ve kullanıcı tarafından başlatılan isteğe bağlı bulut yedekleme akışlarını açıklar. Gizlilik ile ilgili tüm soru ve talepleriniz için doğrudan <a href="mailto:isuatcebeci@gmail.com">isuatcebeci@gmail.com</a> adresinden Suat CEBECİ’ye ulaşabilirsiniz.</p>
+
+      <h2>1. Cihaz Üzerinde Saklama ve Sunucu Mimarisi</h2>
+      <p>KEYS geliştiricisine ait herhangi bir parola kasası sunucusu bulunmamaktadır. Temel parola kasanız, şifreleriniz ve yerel kayıtlarınız doğrudan cihazınızda yerel olarak saklanır ve internet bağlantısı olmadan çevrimdışı kullanılabilir. KEYS için bir hesap açmanız gerekmez.</p>
+      <p><strong>Ağ ve Hizmet Ayrımı:</strong> Google Drive veya Apple iCloud yedeklemesi kullanıcı tarafından açıkça başlatıldığında, bu işlem ilgili sağlayıcının bulut altyapısına bağlanmak için ağ bağlantısı ve kullanıcının ilgili hizmet hesabını gerektirir. Kullanıcı bulut yedeklemesini açmadığı sürece hiçbir veri cihaz dışına gönderilmez.</p>
+
+      <h2>2. Apple Keychain ve Kasa Verisi Koruma Düzeyleri</h2>
+      <p>KEYS, kayıtları Apple Keychain ve yerel App Group depolama alanında saklar.</p>
+      <p><strong>Koruma Düzeyi Ayrımı:</strong> Kasa kayıtlarının başlık, kullanıcı adı, web sitesi ve notlar (<code>PasswordEntry.notes</code>) alanları kasa metadata'sının parçasıdır. Kasa metadata listesi yerel Keychain ve App Group alanında saklanır. Bireysel parola sırları (password secrets) ise her kayıt için ayrı bir anahtarla Keychain'de tutulur. Bu nedenle notlar (notes), parola sırlarıyla aynı bireysel <code>SecAccessControl</code> veya her işlemde ayrı biyometrik sorgu korumasına sahip değildir; kasa kilidi açıldığında metadata ile birlikte görüntülenir.</p>
+      <p><strong>Keychain Erişim Koruması (<code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code>):</strong></p>
+      <ul>
+        <li>Verilere yalnızca cihazın ekran kilidi açıkken erişilebilir.</li>
+        <li>Şifrelenmemiş iTunes/Finder veya iCloud cihaz yedeklerine Keychain sırları dahil edilmez; başka bir cihaza taşınamaz.</li>
+        <li>Cihaz kilitlendiğinde işletim sistemi bu verilere erişimi sınırlar.</li>
+      </ul>
+
+      <h2>3. Biyometrik Kimlik Doğrulama ve Ekran Akışları</h2>
+      <p>Kasanın kilidini açarken Apple LocalAuthentication framework’ü (Face ID, Touch ID veya Optic ID) kullanılır. Biyometrik yüz veya parmak izi şablonunuz uygulamaya kesinlikle iletilmez; doğrulama doğrudan Apple donanımı (Secure Enclave) tarafından sağlanır ve uygulamaya yalnızca sonuç aktarılır.</p>
+      <p><strong>Ekran Bazlı Akışlar:</strong> Kilit ekranında (LockView) birincil olarak biyometri veya cihaz parolası kullanılır; erişilemezse acil Kurtarma Anahtarı ile açma seçeneği sunulur. Apple Password AutoFill eklentisinde ise doğrudan Apple sisteminin kendi doğrulama arayüzü devrededir.</p>
+
+      <h2>4. Apple Password AutoFill Eklentisi</h2>
+      <p>Safari ve iOS uygulamalarında formları doldurmak için sistemin <code>ASCredentialIdentityStore</code> arayüzü kullanılır. Kayıt kimliği, web adresi ve kullanıcı adı minimal eşleşme için saklanır; parolanın kendisi bu indekse yazılmaz. Parola yalnızca kullanıcı öneriyi seçtiğinde ve sistem kimlik doğrulamasını geçtiğinde anlık sağlanır. Çok kullanıcılı alan adları (ör. <code>alice.onrender.com</code> vs <code>bob.onrender.com</code>) ve public suffix sınırları titizlikle izole edilir.</p>
+
+      <h2>5. İsteğe Bağlı Bulut Yedekleme (Google Drive & iCloud)</h2>
+      <p>Bulut yedekleme tamamen isteğe bağlıdır ve temel kasa bulut bağlantısı olmadan çevrimdışı kullanılabilir.</p>
+      <ul>
+        <li><strong>iCloud:</strong> iCloud yedeklemesi CloudKit veritabanı API'si yerine uygulamanın resmi iCloud Ubiquity Container'ı (<code>iCloud.com.offlinevault.keys</code>) ve <code>Documents</code> klasörü üzerinden <code>NSFileCoordinator</code> dosya koordinasyonu ile çalışır.</li>
+        <li><strong>Google Drive:</strong> Google OAuth sırasında <code>drive.appdata</code>, <code>openid</code>, <code>email</code> ve <code>profile</code> kapsamları kullanılır. Uygulama yalnızca kendi özel uygulama veri klasörüne erişir. Bu süreçte Google bağlı hesap profil bilgilerini ve teknik dosya üstverilerini (dosya adı, oluşturma/değiştirilme zamanı, dosya boyutu, MIME türü) görür. OAuth tokenları Keychain'de şifreli saklanır.</li>
+        <li><strong>Yedekleme Şifrelemesi:</strong> Buluta yüklenen (<code>.keysbackup</code>) dosyaları cihazdan çıkmadan önce PBKDF2 ve AES-256-GCM ile şifrelenir. Sağlayıcılar açık kasa içeriğine erişemez, ancak dosya sistemi üstverilerini işler.</li>
+      </ul>
+
+      <h2>6. Yerel CSV İçe Aktarma, Pano ve İzinler</h2>
+      <ul>
+        <li><strong>Chrome CSV İçe Aktarma:</strong> Seçtiğiniz CSV dosyası tamamen cihazınızda yerel işlenir ve internete aktarılmaz.</li>
+        <li><strong>Pano (Clipboard) Koruması:</strong> Kopyalanan hassas veriler iOS panosuna <code>UIPasteboard</code> üzerinden <code>localOnly: true</code> (Universal Clipboard engelleme) ve <code>expirationDate</code> (15-120 sn) seçenekleriyle yazılır. Süresi dolduğunda iOS panoyu temizler; uygulama ön plana döndüğünde de durum senkronize edilir.</li>
+        <li><strong>Kamera İzni:</strong> Yalnızca cihazlar arası doğrudan acil kurtarmada (Peer-to-Peer) QR kod taramak için kullanılır; görüntü kaydedilmez veya iletilmez.</li>
+        <li><strong>Yerel Ağ İzni (Bonjour):</strong> Yalnızca aynı Wi-Fi ağındaki iki yetkili cihaz arasında şifreli doğrudan veri aktarımı (<code>_keys-peer-rec</code>) için kullanılır.</li>
+      </ul>
+
+      <h2>7. Sıfır Analitik, Sıfır Takipçi, Sıfır Reklam</h2>
+      <p>Uygulamada hiçbir üçüncü taraf analitik kütüphanesi (Firebase, Google Analytics vb.) veya reklam ağı SDK'sı bulunmaz. Kullanıcı verileri geliştirici tarafından takip edilmez, profillenmez ve satılmaz. <code>PrivacyInfo.xcprivacy</code> dosyasında <code>NSPrivacyTracking</code> false olarak beyan edilmiştir.</p>
+
+      <h2>8. Veri Silme ve İletişim</h2>
+      <p>Kasa kayıtlarınızı tek tek silebilir veya kasanızı tamamen sıfırlayabilirsiniz. Bulut yedeklerini dilediğiniz an Yedekleme Merkezi'nden kalıcı olarak silebilirsiniz.</p>
+      <div class="card-box">
+        <p><strong>Gizlilik Sorumlusu:</strong> Suat CEBECİ<br>
+        <strong>E-Posta:</strong> <a href="mailto:isuatcebeci@gmail.com">isuatcebeci@gmail.com</a></p>
+      </div>
+    </section>
+
+    <!-- 2. GÜVENLİK POLİTİKASI -->
+    <section id="pane-security" class="tab-pane" role="tabpanel" aria-labelledby="btn-security">
+      <p>Bu politika, <strong>KEYS Password Manager</strong> uygulamasının güvenlik mimarisini, kriptografik standartlarını ve güvenlik sorumluluk paylaşımını tanımlar.</p>
+
+      <h2>1. Güvenlik Modeli ve Sorumluluk Paylaşımı</h2>
+      <p>KEYS, şifreleme anahtarlarının yalnızca sizin kontrolünüzdeki cihazda oluşturulduğu bir mimariyle çalışır. Geliştiricinin kasanızı uzaktan açma veya parolanızı sıfırlama yetkisi yoktur.</p>
+      <ul>
+        <li>Güçlü bir cihaz ekran kilidi ve parolası belirlemek kullanıcının sorumluluğundadır.</li>
+        <li>Kurtarma Anahtarını güvenli çevrimdışı bir yerde saklamak kullanıcının sorumluluğundadır.</li>
+        <li>İşletim sistemi jailbreak/root yapılmış cihazlarda donanımsal güvenlik sınırları zayıflayabilir.</li>
+      </ul>
+
+      <h2>2. Kriptografik Mimari ve Standartlar</h2>
+      <p>KEYS, Apple'ın resmi CryptoKit ve CommonCrypto güvenlik kütüphanelerini temel alır:</p>
+      <ul>
+        <li><strong>AES-256-GCM (Galois/Counter Mode):</strong> Kasa yedeklerinde kimlik doğrulamalı simetrik şifreleme sağlar. Verinin gizliliği ve bütünlüğü birlikte doğrulanır.</li>
+        <li><strong>Sürüme Göre PBKDF2-HMAC-SHA256:</strong> Güncel V2 (.keysbackup) yedeklerinde varsayılan olarak 250.000 iterasyon kullanılır. Eski V1 arşivlerinde 100.000 iterasyon kullanılmış olup, sistem geriye dönük uyumlulukla bu arşivleri de doğrular ve açar.</li>
+        <li><strong>Donanımsal Keychain Koruması:</strong> Cihaz üzerindeki sırlar Apple Keychain'de <code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code> ile korunur.</li>
+      </ul>
+
+      <h2>3. 28 Karakterli Kurtarma Anahtarı</h2>
+      <p>Kasanız ilk oluşturulduğunda acil durumlar için Crockford Base32 standardında 28 karakterlik bir Kurtarma Anahtarı üretilir (Örnek: <code>ABCD-EFGH-JKMN-PQRT-VWXY-2345-6789</code>). Karışıklık yaratabilecek karakterler (0/O, 1/I/L) elenmiştir. Son 4 karakter SHA-256 tabanlı kontrol toplamı (checksum) içerir ve yazım hatalarını anında yakalar. Anahtar yalnızca cihazınızın Keychain'inde şifreli tutulur.</p>
+
+      <h2>4. Fail-Closed Güvenlik ve Veri Silme Sınırları</h2>
+      <p>KEYS 'Fail-Closed' (Güvenli Kapanma) kuralıyla çalışır: Herhangi bir veri bütünlüğü bozulması, yetkisiz erişim denemesi veya geçersiz anahtar tespit edildiğinde sistem asla veri sızdırmaz, işlemi derhal durdurur ve kilitlenir. Kasa kilitlendiğinde parolalar RAM'den temizlenir; App Switcher ekranında bulanıklaştırma uygulanır. Kurtarma anahtarı olmadan kilitli bir kasayı kurtarmak teknik olarak imkansızdır.</p>
+
+      <h2>5. Güvenlik Açığı Bildirimi (Vulnerability Disclosure)</h2>
+      <p>Herhangi bir potansiyel güvenlik açığı tespit ettiğinizde sorumlu açıklama prensipleri doğrultusunda doğrudan gelişticiye bildirmenizi rica ederiz:</p>
+      <ul>
+        <li><strong>Güvenlik İletişimi:</strong> <a href="mailto:isuatcebeci@gmail.com">isuatcebeci@gmail.com</a></li>
+        <li>Tüm güvenlik bildirimleri en geç 48 saat içerisinde değerlendirilir ve doğrulanırsa öncelikli güvenlik yaması yayınlanır.</li>
+      </ul>
+
+      <div class="alert-box">
+        <h3>⚠️ Önemli Güvenlik Uyarısı</h3>
+        <p>Destek veya güvenlik e-postalarına <strong>ASLA parolanızı, 28 karakterli kurtarma anahtarınızı, Google Drive yetkilendirme belirteçlerinizi veya kasa yedek dosyalarınızı</strong> eklemeyiniz. Geliştirici sizden asla parolanızı e-posta yoluyla istemez.</p>
+      </div>
+
+      <h2>6. Gerçekçi Güvenlik Garantileri</h2>
+      <p>KEYS, pazarlama amaçlı "%100 kırılamaz", "asla ele geçirilemez" gibi yanıltıcı iddialar yerine; matematiksel ve kanıtlanmış modern kriptografik temellere dayalı şeffaf güvenlik garantileri sunar.</p>
+    </section>
+
+    <footer>
+      <span>&copy; 2026 KEYS • Suat CEBECİ</span>
+      <span><a href="/support">Destek Sayfası</a></span>
+    </footer>
+  </main>
+
+  <script>
+    function showTab(tabName) {
+      const isPrivacy = (tabName === 'privacy');
+      document.getElementById('pane-privacy').classList.toggle('active', isPrivacy);
+      document.getElementById('pane-security').classList.toggle('active', !isPrivacy);
+      document.getElementById('btn-privacy').classList.toggle('active', isPrivacy);
+      document.getElementById('btn-security').classList.toggle('active', !isPrivacy);
+      document.getElementById('btn-privacy').setAttribute('aria-selected', isPrivacy ? 'true' : 'false');
+      document.getElementById('btn-security').setAttribute('aria-selected', !isPrivacy ? 'true' : 'false');
+      if (history.replaceState) {
+        history.replaceState(null, null, '#' + tabName);
+      }
+    }
+    // URL hash kontrolü (#security veya #privacy)
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash === '#security' || hash === '#guvenlik') {
+        showTab('security');
+      } else {
+        showTab('privacy');
+      }
+    });
+  </script>
+</body>
+</html>
